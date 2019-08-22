@@ -10,6 +10,15 @@ import UIKit
 
 class PlanetDetailViewController: UIViewController {
     
+    var planet: Planet? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,14 +35,4 @@ class PlanetDetailViewController: UIViewController {
         imageView.image = planet.image
         label.text = planet.name
     }
-    
-    var planet: Planet? {
-        didSet {
-            updateViews()
-        }
-    }
-    
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
-    
 }

@@ -8,14 +8,25 @@
 
 import UIKit
 
-class PlanetsCollectionViewController: UICollectionViewController, UIPopoverPresentationControllerDelegate {
+
+
+class PlanetsCollectionViewController: UICollectionViewController {
     
-    @IBAction func unwindToPlanetsCollectionViewController(_ sender: UIStoryboardSegue) {
+    // MARK: - Properties
+    
+    let planetController = PlanetController()
+    
+    var planets: [Planet] {
+        let shouldShowPluto = UserDefaults.standard.bool(forKey: .shouldShowPlutoKey)
+        return shouldShowPluto ? planetController.planetsWithPluto : planetController.planetsWithoutPluto
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView?.reloadData()
+    }
+    
+    @IBAction func unwindToPlanetsCollectionViewController(_ sender: UIStoryboardSegue) {
     }
     
     // MARK: UICollectionViewDataSource
@@ -32,14 +43,6 @@ class PlanetsCollectionViewController: UICollectionViewController, UIPopoverPres
         cell.textLabel.text = planet.name
         
         return cell
-    }
-    
-    // MARK: UICollectionViewDelegate
-    
-    // MARK: - UIPopoverPresentationControllerDelegate
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
     }
     
     // MARK: - Navigation
@@ -62,14 +65,11 @@ class PlanetsCollectionViewController: UICollectionViewController, UIPopoverPres
             detailVC.planet = planets[indexPath.row]
         }
     }
+}
+
+extension PlanetsCollectionViewController: UIPopoverPresentationControllerDelegate {
     
-    // MARK: - Properties
-    
-    let planetController = PlanetController()
-    
-    var planets: [Planet] {
-        let shouldShowPluto = UserDefaults.standard.bool(forKey: .shouldShowPlutoKey)
-        return shouldShowPluto ? planetController.planetsWithPluto : planetController.planetsWithoutPluto
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .fullScreen
     }
-    
 }

@@ -10,14 +10,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var shouldShowPlutoSwitch: UISwitch!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateViews()
-    }
-    
-    @IBAction func changeShouldShowPluto(_ sender: UISwitch) {
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey)
     }
     
     private func updateViews() {
@@ -25,5 +22,8 @@ class SettingsViewController: UIViewController {
         shouldShowPlutoSwitch.isOn = userDefaults.bool(forKey: .shouldShowPlutoKey)
     }
     
-    @IBOutlet weak var shouldShowPlutoSwitch: UISwitch!
+    @IBAction func changeShouldShowPluto(_ sender: UISwitch) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey)
+    }
 }
