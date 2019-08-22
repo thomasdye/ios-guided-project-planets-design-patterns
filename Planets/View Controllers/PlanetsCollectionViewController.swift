@@ -70,6 +70,6 @@ class PlanetsCollectionViewController: UICollectionViewController {
 extension PlanetsCollectionViewController: UIPopoverPresentationControllerDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .fullScreen
+        return .none
     }
 }
