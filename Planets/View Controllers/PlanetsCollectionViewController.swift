@@ -24,10 +24,10 @@ class PlanetsCollectionViewController: UICollectionViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		updateUI()
+		updateViews()
 	}
 	
-	func updateUI() {
+	func updateViews() {
         collectionView?.reloadData()
 	}
     
@@ -54,7 +54,7 @@ class PlanetsCollectionViewController: UICollectionViewController {
 	
     @IBAction func unwindToPlanetsCollectionViewController(_ sender: UIStoryboardSegue) {
 		// Update the UI if we segue back to this view controller
-		updateUI()
+		updateViews()
 	}
 }
 
@@ -87,6 +87,6 @@ extension PlanetsCollectionViewController: UIAdaptivePresentationControllerDeleg
 	func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
 		// Every time the user goes to swipe down to dismiss the modal
 		// popover, we should update the UI based on the new state
-		updateUI()
+		updateViews()
 	}
 }
