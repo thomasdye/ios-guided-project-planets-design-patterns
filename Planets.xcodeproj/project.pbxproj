@@ -18,6 +18,7 @@
 		9DDBBD262113678F00A55978 /* PlanetsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDBBD252113678F00A55978 /* PlanetsCollectionViewController.swift */; };
 		9DDBBD2B2113748200A55978 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDBBD2A2113748200A55978 /* SettingsViewController.swift */; };
 		9DDBBD2D211376BE00A55978 /* SettingsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDBBD2C211376BE00A55978 /* SettingsKeys.swift */; };
+		EDF8C05E2491D1CF002C56E0 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8C05D2491D1CF002C56E0 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9DDBBD252113678F00A55978 /* PlanetsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCollectionViewController.swift; sourceTree = "<group>"; };
 		9DDBBD2A2113748200A55978 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9DDBBD2C211376BE00A55978 /* SettingsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsKeys.swift; sourceTree = "<group>"; };
+		EDF8C05D2491D1CF002C56E0 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				9DDBBD18211360D100A55978 /* Planet.swift */,
+				EDF8C05D2491D1CF002C56E0 /* Notifications.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				9DDBBD212113661F00A55978 /* PlanetCollectionViewCell.swift in Sources */,
 				9DDBBD262113678F00A55978 /* PlanetsCollectionViewController.swift in Sources */,
 				9D163DAF2153758F00C55F30 /* PlanetDetailViewController.swift in Sources */,
+				EDF8C05E2491D1CF002C56E0 /* Notifications.swift in Sources */,
 				9DDBBD1F211360F500A55978 /* PlanetController.swift in Sources */,
 				9DDBBD072113609700A55978 /* AppDelegate.swift in Sources */,
 				9DDBBD19211360D100A55978 /* Planet.swift in Sources */,

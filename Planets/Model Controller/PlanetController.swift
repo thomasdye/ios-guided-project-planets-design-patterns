@@ -9,7 +9,18 @@
 import Foundation
 
 class PlanetController {
-    var planetsWithoutPluto = [
+    
+    // open - accessible by anyone and subclassable 24/7
+    // public - accessible by anyone
+    // internal - accessible in this modile (app/executable)
+    // fileprivate - accessible to any class/struct in this file
+    // private - only accessible to this class and extensions in this file
+    
+    static let shared = PlanetController()
+    
+    private init() { }
+    
+   var planetsWithoutPluto = [
         Planet(name: "Mercury", imageName: "mercury"),
         Planet(name: "Venus", imageName: "venus"),
         Planet(name: "Earth", imageName: "earth"),
